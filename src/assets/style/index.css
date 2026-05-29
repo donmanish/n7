@@ -1,0 +1,1313 @@
+/* archivo-regular - latin_latin-ext_vietnamese */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/archivo-v25-latin_latin-ext_vietnamese-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* archivo-500 - latin_latin-ext_vietnamese */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/archivo-v25-latin_latin-ext_vietnamese-500.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* roboto-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v51-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* roboto-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/roboto-v51-latin-500.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* chivo-mono-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Chivo Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/chivo-mono-v11-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* chivo-mono-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Chivo Mono';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/chivo-mono-v11-latin-500.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text-white {
+    color: #E9F4F9 !important;
+}
+
+body {
+    background: #000D12;
+}
+
+.bg-dark-custom {
+    background-color: #000D12 !important;
+}
+
+
+/* Base Reset Optimization */
+.header-wrapper * {
+    box-sizing: border-box;
+}
+
+.header-wrapper {
+    width: 100%;
+    position: relative;
+    min-height: 100px;
+}
+
+/* Fluid Floating Navbar Structure */
+.header-container {
+    position: fixed;
+    top: 31px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    /* Core Change: Fluid percentage for responsive sizing */
+    max-width: 716.45px;
+    /* Locks max boundary at original layout specification */
+    height: 47px;
+    padding: 9px 16px;
+    border-radius: 12px;
+    border: 1px solid #2f2f2f;
+    background: rgba(47, 47, 47, 0.7);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99999999;
+}
+
+/* Typography Rules */
+.logo h1 {
+    color: #E9F4F9;
+    font-size: 24px;
+    font-family: Archivo, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0px;
+    margin: 0;
+    line-height: 120%;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-menu a {
+    font-family: 'Chivo Mono', monospace;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #E9F4F9;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: #008cff;
+}
+
+/* Button Component Styles */
+.demo-btn {
+    width: 161px;
+    height: 26px;
+    background: transparent;
+    border: 1px solid #E9F4F9;
+    border-radius: 6px;
+    color: #ffffff;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 11px;
+    line-height: 130%;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo-btn:hover {
+    background: #E9F4F9;
+    border-color: #E9F4F9;
+    color: #005bb5;
+}
+
+/* Visibility Variant Utility Handles */
+.mobile-only-btn {
+    display: none;
+}
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+/* Dropdown Handling Architecture */
+.nav-item-dropdown {
+    position: relative;
+}
+
+.dropdown-arrow {
+    position: relative;
+    height: 1.3em;
+    line-height: 1.2;
+    margin-left: -2px;
+    transition: transform 0.2s ease;
+    top: -1px;
+}
+
+
+.dropdown-arrow.open {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 14px;
+    padding: 8px 0;
+    list-style: none;
+    width: 160px;
+    background: rgba(47, 47, 47, 0.95);
+    border: 1px solid #2f2f2f;
+    border-radius: 8px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-menu li a {
+    font-size: 11px;
+    padding: 10px 16px;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background: rgba(0, 140, 255, 0.15);
+    color: #008cff;
+}
+
+
+
+/*hero section*/
+
+/* Custom Typography Details */
+.hero-title {
+    font-family: "Archivo", sans-serif;
+    font-size: 67px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    line-height: 130%;
+    max-width: 358px;
+    color: #E9F4F9;
+}
+
+/* Custom Buttons leveraging Chivo Mono specs */
+.btn-gradient {
+    font-family: 'Chivo Mono', monospace;
+    width: 210px;
+    height: 49px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 130%;
+    padding: 15px 51px;
+    color: #ffffff;
+
+    /* Base background is the gradient */
+    background: linear-gradient(135deg, #00B4FD 0%, #003ACE 100%);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 1px rgb(143 143 143 / 47%);
+
+    /* Required for positioning the smooth hover layer */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.btn-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #E9F4F9;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover States */
+.btn-gradient:hover {
+    color: #003ACE;
+    /* box-shadow: 0px 6px 24px rgba(0, 102, 255, 0.4); */
+}
+
+/* Fade in the solid background layer */
+.btn-gradient:hover::before {
+    opacity: 1;
+}
+
+
+.btn-outline-custom {
+    font-family: 'Chivo Mono', monospace;
+    width: 210px;
+    height: 49px;
+    padding: 15px 59px;
+    line-height: 130%;
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid #E9F4F9;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.btn-outline-custom:hover {
+    color: #003ACE;
+    background-color: #E9F4F9;
+    border-color: #E9F4F9;
+}
+
+/* Ambient Radial Glow Setup */
+.ambient-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 570px;
+    max-height: 509px;
+    top: 37%;
+    left: 65%;
+    /* right: 57%; */
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(0, 110, 255, 0.25) 28%, rgba(0, 0, 0, 0) 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-image-card {
+    z-index: 1;
+    max-width: 100%;
+}
+
+
+
+/* Trusted By Section Stylings */
+.border-top {
+    border-color: rgba(255, 255, 255, 0.07) !important;
+}
+
+.trusted-title {
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+    color: #E9F4F9;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.logo-item {
+    font-family: "Roboto", sans-serif;
+    font-size: 13.8px;
+    color: #586384;
+    font-weight: 700;
+    letter-spacing: 0px;
+    line-height: 110.00000000000001%;
+    display: flex;
+    align-items: center;
+    gap: 4.6px;
+}
+
+.logo-item .shot-hero-img {
+    width: 17.48px;
+    height: 18.4px;
+    ;
+}
+
+/*section 2*/
+
+
+/* Feature Item Aesthetics */
+.feature-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-card-title {
+    font-family: "Archivo", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    padding-top: 8px;
+    padding-bottom: 15px;
+}
+
+.feature-card-text {
+    font-family: "Archivo Reguler", sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #E9F4F9;
+
+}
+
+.btn-learn-more {
+    font-family: 'Chivo Mono', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    color: #00B4FD;
+    line-height: 1.3;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+
+    /* 1. Relative position on the main link container so the line covers everything */
+    position: relative;
+    padding-bottom: 6px;
+    /* Spacing between the text/arrow and the line */
+    transition: color 0.3s ease;
+}
+
+/* Create the partial underline covering text AND arrow */
+.btn-learn-more::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    /* 2. Base State: Permanently show at half width (covers "LEARN") */
+    width: 50%;
+    height: 1.5px;
+    background-color: #00B4FD;
+
+    /* 3. Smoothly transition the width */
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================
+   Hover States
+   ========================================== */
+.btn-learn-more:hover {
+    color: #00B4FD;
+}
+
+/* 4. Hover State: Expand the line to 100% full width under the text and arrow */
+.btn-learn-more:hover::after {
+    width: 100%;
+}
+
+/* 5. Stationary Arrow: Arrow stays perfectly still */
+.btn-learn-more .arrow-icon-img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+
+
+
+
+
+/* NBFC Decorative Tag Utility */
+.badge-nbfc {
+    font-family: 'Chivo Mono', monospace;
+    font-size: 14px;
+    color: #E9F4F9;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 1.3;
+}
+
+/*section 3*/
+
+.features-container-wrapper {
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Big Translucent Background Watermark Outline text */
+.bg-watermark-text {
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28vw;
+    font-weight: 700;
+    line-height: 1;
+    color: #dd575700;
+    -webkit-text-stroke: 0.8px rgb(0 80 214 / 24%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Text Headers styling */
+.feature-main-title {
+    font-family: "Archivo", sans-serif;
+    font-size: 53px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.1px;
+}
+
+.feature-main-title-two {
+    font-family: "Archivo", sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0px;
+}
+
+.feature-main-subtitle {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #E9F4F9;
+    line-height: 1.3;
+    padding-bottom: 2px;
+    padding-top: 13px;
+}
+
+
+
+.btn-inline-link {
+    font-family: 'Chivo Mono', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #00B4FD;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+
+    /* 1. Relative position on the main link container so the line covers everything */
+    position: relative;
+    padding-bottom: 6px;
+    /* Spacing between the text/arrow and the line */
+    transition: color 0.3s ease;
+}
+
+/* Create the partial underline covering text AND arrow */
+.btn-inline-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    /* 2. Base State: Permanently show at half width (covers "LEARN") */
+    width: 50%;
+    height: 1.5px;
+    background-color: #00B4FD;
+
+    /* 3. Smoothly transition the width */
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+/* ==========================================
+   Hover States
+   ========================================== */
+.btn-inline-link:hover {
+    color: #00B4FD;
+}
+
+/* 4. Hover State: Expand the line to 100% full width under the text and arrow */
+.btn-inline-link:hover::after {
+    width: 100%;
+}
+
+/* 5. Stationary Arrow: Arrow stays perfectly still */
+.btn-inline-link .arrow-icon-img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    /* Removed the transform translation rule so it stays fixed */
+}
+
+/* Temporary positioning simulation tricks to showcase dashboard parts locally */
+.laptop-preview-container {
+    max-width: 620px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Crop hacks specifically implemented to parse sample areas out of the prompt image */
+.img-crop-top {
+    object-fit: cover;
+    object-position: top right;
+    max-height: 100%;
+    width: 100%;
+}
+
+.img-crop-bottom {
+    object-fit: cover;
+    object-position: bottom left;
+    max-height: 506px;
+    width: 100%;
+}
+
+/* Checklist Blocks Section */
+.list-section-heading {
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+    color: #E9F4F9;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+
+
+.feature-checklist-two li {
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000D12;
+    line-height: 1.3;
+}
+
+.checklist-img {
+    width: 29px;
+    height: 31px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+
+
+/* Outer Card Container Panel with dynamic subtle inner gradient lighting */
+.cta-card-panel {
+    background: linear-gradient(99.21deg, #031E2A -12.22%, #000D12 59.26%);
+    border-radius: 20px;
+    padding: 150px 58px;
+}
+
+.cta-section {
+    padding-bottom: 100px;
+}
+
+.cta-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #E9F4F9;
+    max-width: 500px;
+}
+
+/* Large Background Outline Text Styling */
+.cta-bg-watermark {
+    position: absolute;
+    right: -3%;
+    top: 36%;
+    transform: translateY(-50%);
+    font-size: 33vw;
+    font-weight: 700;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 0.8px rgb(13 106 162 / 10%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/*section 5*/
+
+.ticker-section {
+    /* Utilizing your exact light theme background color token */
+    background-color: #ffffff;
+    border-color: rgba(0, 140, 255, 0.15) !important;
+}
+
+/* Outer layout confinement */
+.ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* The horizontal tracks hosting the looped elements */
+.ticker-track {
+    display: flex;
+    width: max-content;
+    animation: marqueeScroll 25s linear infinite;
+}
+
+/* Hover effect pauses the moving ticker seamlessly if user interacts */
+.ticker-track:hover {
+    animation-play-state: paused;
+}
+
+/* Ticker Phrase Typography Styling */
+.ticker-phrase {
+    font-family: 'Archivo', sans-serif;
+    font-size: 47px;
+    font-weight: 600;
+    color: #000D12;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+/* Highlighted Core Code Token */
+
+
+.ticker-highlight {
+    /* 1. Apply your exact custom Figma linear gradient */
+    background: linear-gradient(106.53deg, #00B4FD -5.68%, #003ACE 86.98%);
+
+    /* 2. Clip the background layout color exclusively to the text shape */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Make the default text color transparent so the gradient shines through */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    /* Optional: Fixes a common browser clipping bug on certain fonts */
+    display: inline-block;
+}
+
+
+/* Star/Spoke Icon Dividers */
+.ticker-divider {
+    font-size: 1.25rem;
+    color: #a4b4bc;
+}
+
+.ticker-img {
+    width: 93px;
+    /* Adjust the width based on your design scale */
+    height: 66px;
+    /* Keeps the image square */
+    object-fit: contain;
+    display: inline-block;
+}
+
+/* Infinite Scrolling Animation Logic Matrix */
+@keyframes marqueeScroll {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+.feature-checklist li {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #E9F4F9;
+    line-height: 1.3;
+}
+
+
+/*section 6*/
+
+
+/* Section Container Layout Context */
+.digital-banking-features {
+    position: relative;
+    width: 100%;
+    background-color: #f7fafd;
+    /* Clean light background color match */
+    padding: 100px 0;
+    overflow: hidden;
+    z-index: 1;
+}
+.digital-banking-features .middle-phone{
+    margin: 87px 0px;
+}
+
+/* 1. Watermark Background Styling Mechanics */
+.features-watermark-bg {
+    position: absolute;
+    top: -1%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 893px;
+    height: 680px;
+    background-image: url(/src/assets/images/N7.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.4;
+}
+.features-watermark-bg-2{
+    position: absolute;
+    top: 19%;
+    left: 24%;
+    transform: translateX(-50%);
+    width: 992px;
+    height: 815px;
+    background-image: url(/src/assets/images/rotate.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: -1;
+    pointer-events: none;
+
+}
+.features-watermark-bg-3{
+    position: absolute;
+    bottom: 16%;
+    right: -43%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 878px;
+    background-image: url(/src/assets/images/7.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: -1;
+    pointer-events: none;
+
+}
+
+/* Subtle Glowing Orb Effect in bottom left corner */
+.bottom-left-glow {
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 180, 253, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+
+/* Typography Specifications */
+.section-main-title {
+    font-family: 'Archivo', sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    color: #000D12;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -0.01px;
+    max-width: 281px;
+}
+
+.feature-sub-title {
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000D12;
+    line-height: 1.3;
+}
+
+
+.section-desc-text {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000D12;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+
+
+/* Phone Presentation Boundaries */
+.phone-mockup {
+    max-height: 520px;
+    object-fit: contain;
+    filter: drop-shadow(0px 20px 40px rgba(13, 30, 45, 0.08));
+    /* Adds a smooth application frame shadow drop */
+}
+
+/* ==========================================================
+   Bottom Dark Theme CTA Banner Styling
+   ========================================================== */
+.cta-banner-card {
+    background: #030a10;
+    /* Solid dark theme background wrapper box layout matching image */
+    border-radius: 24px;
+    border: 1px solid #14222f;
+    box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.2);
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-title {
+    font-family: 'Archivo', sans-serif;
+    font-size: 53px;
+    font-weight: 400;
+    color: #E9F4F9;
+    line-height: 1.2;
+    letter-spacing: -0.01;
+}
+
+.cta-desc {
+    font-family: 'Chivo Mono', monospace;
+    font-size: 13px;
+    color: #8fa0ac !important;
+    line-height: 150%;
+}
+
+/* Transparent action button modifier layout style choices */
+.btn-outline-white {
+    font-family: 'Chivo Mono', monospace;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    font-size: 11px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-white:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}
+
+/*section 7*/
+
+/* Light page environment bleed wrapper matching the image frame borders */
+.banner-bleed-wrapper {
+    padding-top: 100px;
+}
+
+.n7-panel-card {
+    background: linear-gradient(99.21deg, #031E2A -12.22%, #000D12 59.26%);
+    border: none;
+    border-radius: 24px;
+    padding: 150px 48px;
+}
+
+.panel-title {
+    font-family: 'Archivo', sans-serif;
+    font-size: 53px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.01px;
+    color: #E9F4F9;
+}
+
+.panel-desc-text {
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #E9F4F9;
+    max-width: 500px;
+}
+
+/* Big Abstract 'N7' Outline Text Layer */
+.panel-n7-watermark {
+    position: absolute;
+    right: -2%;
+    top: 33%;
+    transform: translateY(-50%);
+    font-size: 32vw;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 0.6px rgb(0 140 255 / 20%);
+    user-select: none;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/*section 8*/
+
+
+.section-title {
+    font-family: "Archivo", sans-serif;
+    font-size: 37px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.01px;
+    color: #E9F4F9;
+    max-width: 75%;
+    margin-bottom: 48px;
+}
+
+
+/* Card Module Stylings */
+.insight-card {
+    background-color: #01141B;
+    border-radius: 16px !important;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+
+
+.insight-card .card-category {
+    font-family: 'Chivo Mono', monospace;
+    font-size: 12px;
+    color: #2490BB;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.insight-card .card-heading {
+    font-family: 'Archivo', sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #E9F4F9;
+}
+
+.insight-card .card-meta {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #64A8C4;
+}
+
+/* Graphic Placeholder block in Featured Card */
+.vector-art-placeholder {
+    background-color: #07193C;
+    width: 100%;
+    aspect-ratio: 1.15 / 1;
+}
+
+.vector-art-placeholder .vector-art-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.graphic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    padding: 22px;
+}
+
+
+/* Internal Card Action Button */
+.btn-card-action {
+    font-family: 'Chivo Mono', monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: #E9F4F980;
+    background-color: transparent;
+    border: 1px solid #E9F4F980;
+    border-radius: 8px;
+    transition: all 0.2s;
+    padding: 10px 0px;
+}
+
+
+.btn-card-action:hover {
+    color: #003ACE ;
+    background-color: #E9F4F9 ;
+    border-color: #E9F4F9 ;
+}
+
+/* Footer Navigation Links utilizing Chivo Mono rules */
+.btn-read-all {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: #0091ff;
+    text-decoration: none;
+    border-bottom: 1px solid #0091ff;
+    padding-bottom: 4px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.btn-read-all i {
+    transition: transform 0.2s;
+}
+
+.btn-read-all:hover {
+    color: #59b2ff;
+    border-color: #59b2ff;
+}
+
+.btn-read-all:hover i {
+    transform: translateX(4px);
+}
+
+/*section 9*/
+
+.case-studies-section {
+    padding-bottom: 70px;
+}
+
+.section-main-heading {
+    font-family: "Archivo", sans-serif;
+    font-size: 53px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.01px;
+}
+
+/* Viewport Window & Layer Stackings */
+.slider-view-viewport {
+    max-width: 960px;
+    width: 100%;
+}
+
+.slider-main-card {
+    background-color: #01111a !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    border-radius: 24px !important;
+    z-index: 5;
+}
+
+.slider-button-contollers{
+
+}
+.slider-link {
+    position: absolute;
+    right: 0;
+    margin-right: 161px;
+}
+/* Decoy Background Stacked Cards (Simulates the visual background card trail look) */
+.decoy-background-card {
+    position: absolute;
+    width: 95%;
+    height: 90%;
+    background-color: rgba(1, 17, 26, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    border-radius: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.decoy-background-card.card-left {
+    left: -20px;
+}
+
+.decoy-background-card.card-right {
+    right: -20px;
+}
+
+/* Left Graphic Panel matrix block rendering */
+.vector-art-canvas {
+    background-color: #05162b;
+    width: 100%;
+    aspect-ratio: 1.15 / 1;
+}
+
+.cross-graphic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.cross-img-unit .cross-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+/*section 10*/
+/* Main Canvas Environment Token matching image_675aba.png */
+.bg-dark-canvas {
+    background-color: #000c14 !important;
+
+}
+
+/* Clear typographic hierarchy metrics */
+.banner-display-heading {
+    font-family: "Archivo", sans-serif;
+    font-size: 53px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.01px;
+}
+
+.banner-supporting-text {
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #E9F4F9;
+    max-width: 520px;
+}
+
+/* --- Interactive Elements Specs (Chivo Mono font tokens) --- */
+
+/* Primary Request Demo Button with high-vibrancy gradient mesh */
+.btn-primary-gradient {
+    font-family: 'Chivo Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #0091ff 0%, #0044ff 100%);
+    border: none;
+    border-radius: 8px;
+    height: 42px;
+    min-width: 145px;
+    box-shadow: 0px 4px 15px rgba(0, 102, 255, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary-gradient:hover {
+    color: #ffffff;
+    box-shadow: 0px 6px 20px rgba(0, 102, 255, 0.35);
+    transform: translateY(-1px);
+}
+
+/* Minimalist Outlined Contact Us Button */
+.btn-outline-minimal {
+    font-family: 'Chivo Mono', monospace;
+    font-size: 11px;
+    font-weight: 400;
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid #4a5761;
+    border-radius: 8px;
+    height: 42px;
+    min-width: 145px;
+    letter-spacing: 0.2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-minimal:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+/*footer layout*/
+.footer-canvas {
+    position: relative;
+    overflow: hidden;
+    /* Keeps the glowing eclipse edges clean and inside the box */
+
+
+
+    background: radial-gradient(ellipse 60% 40% at 50% 100%, rgba(0, 13, 18, 0.35) 0%, rgb(1 10 14 / 72%) 60%, transparent 100%), #000D12;
+
+}
+
+.footer-brand-logo-wrap img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.footer-links-list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #E9F4F9;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.footer-links-list .footer-arrow-right {
+    height: 15px;
+    width: 15px;
+    object-fit: cover;
+}
+
+.office-header {
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.office-address-text {
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+    color: #E9F4F9;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.directory-header {
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #E9F4F9;
+}
+
+.footer-links-list li {
+    max-width: 165px;
+}
+
+.copyright-legal-text {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #E9F4F9;
+}

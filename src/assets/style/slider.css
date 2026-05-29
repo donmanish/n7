@@ -1,0 +1,212 @@
+/* Layout perspective wrapping container context */
+.slider-perspective-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-view-viewport {
+    width: 82%;
+    /* Compresses inner container width to let horizontal background layers bleed past margins */
+    max-width: 920px;
+    height: 460px;
+    margin: 0 auto;
+    position: relative;
+    perspective: 1400px;
+    /* Provides depth perspective for the stack layering structure */
+}
+
+.max-width-layout {
+    max-width: 920px;
+}
+
+/* Master slide card reset styles */
+.slider-main-card {
+    background-color: #010811 !important;
+    border: 1px solid #081526 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: 100%;
+
+    /* Smooth hardware-accelerated Bezier curve transformations */
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: transform 0.75s cubic-bezier(0.25, 1, 0.5, 1),
+        opacity 0.75s ease,
+        filter 0.75s ease,
+        visibility 0.75s ease;
+}
+
+/* 1. FOCUS MAIN CARD: Centered, fully opaque, and scaled to native size */
+.slider-main-card.active-card {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0px);
+    z-index: 10;
+}
+
+/* 2. LEFT OVERLAP PREVIEW CARD: Shifted leftwards, pushed back into 3D space, and dimmed */
+.slider-main-card.prev-card {
+    opacity: 0.15;
+    visibility: visible;
+    /* Moves left by 108%, pushes 150px deep into background Z space, and scales down slightly */
+    transform: translate3d(-108%, 0, -150px) scale(0.92);
+    filter: blur(1px);
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* 3. RIGHT OVERLAP PREVIEW CARD: Shifted rightwards, pushed back into 3D space, and dimmed */
+.slider-main-card.next-card {
+    opacity: 0.15;
+    visibility: visible;
+    /* Moves right by 108%, pushes 150px deep into background Z space, and scales down slightly */
+    transform: translate3d(108%, 0, -150px) scale(0.92);
+    filter: blur(1px);
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* 4. DEEPER RESERVED CARDS: Hidden away and shrunk safely out of sight */
+.slider-main-card.hidden-card {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 0, -300px) scale(0.7);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Left Graphic Grid Canvas Section styles */
+.vector-art-canvas-two {
+    background-color: #07193C;
+    width: 100%;
+    padding: 28px;
+}
+
+
+.cross-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Typography styles matching image reference layout */
+.slider-category {
+    font-family: 'Chivo Mono', monospace;
+    color: #2490BB;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    line-height: 1.3;
+
+}
+
+.slider-title {
+    font-family: 'Archivo', sans-serif;
+    font-size: 43px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #E9F4F9;
+    max-width: 75%;
+}
+
+.brand-blue-color {
+    color: #00a2ff;
+}
+
+/* Bottom Control Row Panel Elements */
+.btn-slider-arrow {
+    border: 1px solid #00a2ff !important;
+    border-radius: 50% !important;
+    width: 40px;
+    height: 40px;
+    background: transparent !important;
+    transition: opacity 0.2s ease;
+}
+
+.btn-slider-arrow img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.btn-slider-arrow:hover {
+    opacity: 0.7;
+}
+
+.slider-partner img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+
+.slider-partner .partner-name {
+    font-family: "Roboto", sans-serif;
+    color: #586E84;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0;
+}
+
+.slider-dot-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #00a2ff;
+    background-color: transparent;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.slider-dot-indicator.active-bar {
+    background-color: #004f80;
+    border-color: #004f80;
+    width: 32px;
+    border-radius: 6px;
+}
+
+.btn-slider-action {
+    font-family: 'Chivo Mono', monospace !important;
+    border: 1px solid #E9F4F980 !important;
+    color: #E9F4F980 !important;
+    border-radius: 10px !important;
+    letter-spacing: 1px;
+    font-size: 12px !important;
+    padding: 10px 183px !important;
+    transition: all 0.2s;
+}
+
+.btn-slider-action:hover {
+    color: #003ACE !important;
+    background-color: #E9F4F9 !important;
+    border-color: #E9F4F9 !important;
+}
+
+
+/* Responsive breakpoint styling rules for tablet/mobile interfaces */
+@media (max-width: 991.98px) {
+    .slider-view-viewport {
+        width: 100%;
+        height: auto;
+        min-height: 600px;
+        perspective: none;
+    }
+
+    .slider-main-card {
+        position: relative !important;
+        margin-bottom: 20px;
+        transform: none !important;
+        /* Drops translation effects on small viewports to maintain spacing */
+    }
+
+    .slider-main-card.prev-card,
+    .slider-main-card.next-card {
+        display: none !important;
+    }
+
+    .slider-title {
+        font-size: 1.7rem;
+    }
+}
