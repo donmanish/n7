@@ -144,8 +144,8 @@
     }
 
     .slider-link {
-        position: static;
-        margin-top: 20px;
+        position: static !important;
+        margin-top: 0;
     }
 
     .bg-watermark-text {
@@ -173,10 +173,52 @@
         width: 70px;
         height: 50px;
     }
+
     .footer-brand-logo-wrap {
         width: 100%;
         max-width: 97px;
     }
+
+    .slider-partner img {
+        height: 16px;
+        width: 16px;
+    }
+
+    .slider-partner .partner-name {
+        font-size: 14px;
+    }
+
+    .slider-partner {
+        margin-bottom: 12px !important;
+    }
+
+    .slider-view-viewport {
+        width: 100%;
+        height: auto;
+        min-height: fit-content;
+        perspective: none;
+    }
+
+    .slider-main-card {
+        position: relative !important;
+        margin-bottom: 20px;
+        transform: none !important;
+        /* Drops translation effects on small viewports to maintain spacing */
+    }
+
+    .slider-main-card.prev-card,
+    .slider-main-card.next-card {
+        display: none !important;
+    }
+
+    .slider-title {
+        font-size: 1.7rem;
+    }
+
+    .case-studies-section {
+        padding-bottom: 0px;
+    }
+
 }
 
 
@@ -510,6 +552,18 @@
     .cta-title {
         word-break: break-word;
     }
+
+    .slider-control-readme-contain {
+        flex-direction: column;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 21px;
+    }
+
+    .slider-link {
+        margin-right: 0;
+    }
+
 }
 
 
@@ -561,4 +615,3 @@
         font-size: 13px;
     }
 }
-

@@ -61,7 +61,7 @@ function Slider({kontrastLogo, ShellsFindlogo, zoomerrLogo}) {
             key={slide.id} 
             className={`card slider-main-card border-0 p-4 p-md-5 text-start position-absolute top-0 start-0 end-0 bottom-0 ${getSlideClass(index)}`}
           >
-            <div className="row align-items-center h-100 g-4 g-md-5">
+            <div className="row align-items-start h-100 g-4 g-md-5">
 
               {/* Left Graphic Matrix Column */}
               <div className="col-12 col-md-5">
@@ -76,7 +76,7 @@ function Slider({kontrastLogo, ShellsFindlogo, zoomerrLogo}) {
               </div>
 
               {/* Right Content Meta Column */}
-              <div className="col-12 col-md-7 d-flex flex-column justify-content-between h-100">
+              <div className="col-12 col-md-7 d-flex flex-column justify-content-aroun h-100">
                 <div>
                   <span className="slider-category text-uppercase mb-2 d-block">
                     {slide.category}
@@ -104,7 +104,7 @@ function Slider({kontrastLogo, ShellsFindlogo, zoomerrLogo}) {
 
       {/* Slider Interface Controls Area */}
       <div className="row align-items-center mt-4 justify-content-center">
-        <div className="col-12 max-width-layout d-flex align-items-center justify-content-between position-relative">
+        <div className="col-12 slider-control-readme-contain max-width-layout d-flex align-items-center justify-content-between position-relative">
           
           {/* Centered Controls block matching image */}
           <div className="slider-button-controllers d-flex align-items-center gap-3 mx-auto">
