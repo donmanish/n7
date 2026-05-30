@@ -1,18 +1,150 @@
-# React + Vite
+# n7 - Application design Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **n7**, a modern frontend design repository featuring clean layouts, custom UI components, and fully responsive designs. Built using **React**, **Vite**, **HTML**, **CSS**, and **JavaScript**.
 
-Currently, two official plugins are available:
+🌐 **Live Demo:** https://n7-phi.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🎨 Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+* Modular CSS architecture
+* Reusable React components
+* Structured layout system
+* Fully responsive design
+* Clean and maintainable codebase
+* Vite-powered fast development environment
+* Automated deployment with Vercel
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+n7/
+├── public/                     # Static assets
+├── src/
+│   ├── assets/
+│   │   └── style/
+│   │       ├── style.css       # Global styles
+│   │       ├── slider.css      # Slider styles
+│   │       └── responsive.css  # Responsive breakpoints
+│   │
+│   ├── components/
+│   │   └── Slider/             # Reusable slider components
+│   │
+│   ├── pages/
+│   │   ├── layout/
+│   │   │   ├── header/         # Header components
+│   │   │   ├── footer/         # Footer components
+│   │   │   └── base/           # Layout wrapper
+│   │   │
+│   │   └── home/               # Home page
+│   │
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have installed:
+
+* Node.js (v18+ recommended)
+* npm
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/donmanish/n7.git
+cd n7
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start Development Server
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 🏗️ Build for Production
+
+Generate an optimized production build:
+
+```bash
+npm run build
+```
+
+The compiled files will be generated inside the:
+
+```text
+dist/
+```
+
+directory.
+
+---
+
+## 🚀 Deployment
+
+This project is deployed using **Vercel**.
+
+### Deployment Configuration
+
+| Setting          | Value         |
+| ---------------- | ------------- |
+| Platform         | Vercel        |
+| Branch           | main          |
+| Build Command    | npm run build |
+| Output Directory | dist          |
+
+Every push to the `main` branch automatically triggers a new deployment.
+
+Live URL:
+
+```text
+https://n7-phi.vercel.app/
+```
+
+---
+
+## 🛠️ Tech Stack
+
+* React
+* Vite
+* JavaScript (ES6+)
+* HTML5
+* CSS3
+* Responsive Web Design
+
+---
+
+## 👨‍💻 Author
+
+**Manish Panda**
+
+* GitHub: https://github.com/donmanish
+
+---
+
+⭐ If you like this project, consider giving it a star on GitHub.
